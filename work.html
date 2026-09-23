@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Somto Portfolio Projects</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Awesome Color Flow Background */
+    .bg-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 30% 30%, #2563eb, transparent 40%),
+                  radial-gradient(circle at 70% 60%, #9333ea, transparent 40%),
+                  radial-gradient(circle at 90% 40%, #14b8a6, transparent 40%),
+                  radial-gradient(circle at 10% 80%, #ec4899, transparent 40%);
+      background-size: 200% 200%;
+      animation: moveColors 15s ease-in-out infinite;
+      z-index: -1;
+      filter: blur(80px);
+      opacity: 0.9;
+    }
+
+    @keyframes moveColors {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    
+  </style>
+</head>
+
+<body class="bg-gray-900 text-white relative">
+
+   
+
+  <!-- Animated Background -->
+  <div class="bg-animation"></div>
+
+  <!-- Navbar -->
+  <header class="flex justify-between items-center px-6 md:px-10 py-6 relative z-50">
+    <div class="flex items-center space-x-1">
+      <a href="index.html" class="text-2xl font-extrabold">Somto<span class="text-pink-600">.</span></a>
+    </div>
+
+    <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-200">
+      <a href="work.html" class="hover:text-white">Projects</a>
+      <a href="photo.html" class="hover:text-white">Photos</a>
+      <a href="about.html" class="hover:text-white">About</a>
+     <a href="mailto:somtexy9026@gmail.com?subject=Project%20Inquiry&body=Hi%20Somto," 
+   class="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition">
+   hello@somto.fr
+</a>
+
+    </nav>
+
+  <!-- Mobile Hamburger -->
+    <button id="menu-btn" class="md:hidden flex flex-col justify-between w-6 h-5 focus:outline-none">
+      <span class="w-full h-0.5 bg-black"></span>
+      <span class="w-full h-0.5 bg-black"></span>
+      <span class="w-full h-0.5 bg-black"></span>
+    </button>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white border-t border-gray-200 shadow-md md:hidden z-50">
+      <div class="flex flex-col items-center space-y-4 py-6 text-sm font-medium text-gray-700">
+        <a href="work.html" id="m-nav-design" class="hover:text-black">Projects</a>
+        <a href="photo.html" id="m-nav-photos" class="hover:text-black">Photos</a>
+        <a href="about.html" id="m-nav-about" class="hover:text-black">About</a>
+       
+        <a href="somtexy9026@gmail.com?subject=Project%20Inquiry&body=Hi%20Somto," 
+   class="bg-black text-white px-4 py-2 rounded-md hover:bg-gray-800 transition">
+   hello@somto.fr
+</a>
+
+      </div>
+    </div>
+
+  </header>
+
+  <!-- Projects Section -->
+  <section class="relative z-20 min-h-screen flex flex-col items-center justify-center px-6 py-20">
+    <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-12 drop-shadow-lg">My Recent Projects</h2>
+    
+   <div class="flex justify-center gap-3 mb-10 flex-wrap">
+      <button class="px-4 py-2 rounded-full bg-indigo-600 text-white">All</button>
+      <button class="px-4 py-2 rounded-full border border-gray-300 hover:bg-gray-400">UI/UX</button>
+      <button class="px-4 py-2 rounded-full border border-gray-300 hover:bg-gray-400">Website Design</button>
+      <button class="px-4 py-2 rounded-full border border-gray-300 hover:bg-gray-400">App Design</button>
+      <button class="px-4 py-2 rounded-full border border-gray-300 hover:bg-gray-400">Web3</button>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="grid md:grid-cols-3 gap-10 w-full max-w-7xl">
+
+      <!-- Project Card 1 -->
+      <div class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+        <img src="images/estate.jpg" alt="Project 1" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-bold text-white">Real Estate Website</h3>
+          <p class="text-gray-300 text-sm mt-2">A real estate website that showcases different properties for sale or rent.</p>
+        </div>
+      </div>
+
+      <!-- Project Card 2 -->
+      <div class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+        <img src="images/haust.png" alt="Project 2" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-bold text-white">Web3 Haust Network Testnet Txn Checker</h3>
+          <p class="text-gray-300 text-sm mt-2">Blockchain ecosystem tools for checking transactions count on haust network testnet.</p>
+        </div>
+      </div>
+
+      <!-- Project Card 3 -->
+      <div class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+        <img src="images/codm.png" alt="Project 3" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-bold text-white">Codm Accounts Store</h3>
+          <p class="text-gray-300 text-sm mt-2">A project i did for a client, he wanted a website for selling and buying call of duty gaming accounts and gaming accessories</p>
+        </div>
+      </div>
+
+    <!-- Project Card 3 -->
+      <div class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+        <img src="images/dax.png" alt="Project 3" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-bold text-white">Kaftan Fashion Store</h3>
+          <p class="text-gray-300 text-sm mt-2">A Fashion Kaftans and agbada website design sample i made myself following thissdax brand.</p>
+        </div>
+      </div>  
+
+    <!-- Project Card 3 -->
+      <div class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+        <img src="images/akawo.png" alt="Project 3" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-bold text-white">Akawo Online Contribution App</h3>
+          <p class="text-gray-300 text-sm mt-2">An online contribution app where employees of an organisation or business men and women can use to contribute/save money weekly/monthly/yearly.
+          </p>
+        </div>
+      </div>
+      
+    <!-- Project Card 3 -->
+      <div class="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl overflow-hidden shadow-lg hover:scale-105 transition-transform duration-300">
+        <img src="images/kova.png" alt="Project 3" class="w-full h-48 object-cover">
+        <div class="p-5">
+          <h3 class="text-xl font-bold text-white">Kova Eccommerce online store</h3>
+          <p class="text-gray-300 text-sm mt-2">A project that shows the elegence of an Eccommerce online store if built perfectly.</p>
+        </div>
+      </div>  
+    </div>
+
+
+  </section>
+ 
+   <!-- Scripts -->
+  <script>
+  
+
+    // ===== Mobile menu toggle =====
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+  
+
+    function setLanguage(lang) {
+      const t = texts[lang];
+      // Navbar
+      document.getElementById('nav-design').textContent = t.nav.design;
+      document.getElementById('nav-photos').textContent = t.nav.photos;
+      document.getElementById('nav-about').textContent = t.nav.about;
+      document.getElementById('nav-contact').textContent = t.nav.contact;
+      document.getElementById('m-nav-design').textContent = t.nav.design;
+      document.getElementById('m-nav-photos').textContent = t.nav.photos;
+      document.getElementById('m-nav-about').textContent = t.nav.about;
+      document.getElementById('m-nav-contact').textContent = t.nav.contact;
+      // Hero
+      document.getElementById('intro-text').textContent = t.hero.intro;
+      document.getElementById('hero-title').childNodes[0].nodeValue = t.hero.title + " ";
+      document.getElementById('hero-subtitle').textContent = t.hero.subtitle;
+      document.getElementById('location-text').textContent = t.hero.location;
+      document.getElementById('btn-designer').textContent = t.hero.btn1;
+      document.getElementById('btn-photographer').textContent = t.hero.btn2;
+      // Highlight selected
+      [btnEN, mBtnEN, btnFR, mBtnFR].forEach(b => b.classList.remove("text-black","border-b","border-black","font-semibold"));
+      if (lang === "en") {
+        btnEN.classList.add("text-black","border-b","border-black","font-semibold");
+        mBtnEN.classList.add("text-black","border-b","border-black","font-semibold");
+      } else {
+        btnFR.classList.add("text-black","border-b","border-black","font-semibold");
+        mBtnFR.classList.add("text-black","border-b","border-black","font-semibold");
+      }
+    }
+
+   
+  </script>
+
+  <!-- Footer -->
+<footer class="bg-gray-900 text-gray-300 text-center py-6 mt-20">
+  <p class="text-sm">
+    © <span class="text-indigo-400 font-semibold">2025 Christian Somto</span>. 
+   
+  <p class="text-xs mt-2 text-gray-500 hover:text-gray-300 transition-all">
+    Designed with ❤️ using <span class="text-indigo-400">TailwindCSS</span>.
+  </p>
+</footer>
+</body>
+</html>
+
+
+<!-- Dots + Dropdown -->
+    <div class="relative group ml-auto">
+        <button class="w-12 h-12 flex items-center justify-center border border-[#2c2d31]
+                 rounded-[40px] text-white text-2xl hover:bg-[#17181b] transition">
+            ...
+        </button>
+
+        <!-- Dropdown -->
+        <div class="absolute hidden group-hover:flex right-0 mt-3 w-48 bg-[#0d0e10]
+                border border-[#2c2d31] rounded-2xl py-2 flex-col shadow-xl z-50">
+            <a href="#" class="px-4 py-2 text-white hover:bg-[#17181b] transition text-sm">Profile</a>
+            <a href="#" class="px-4 py-2 text-white hover:bg-[#17181b] transition text-sm">Settings</a>
+            <a href="#" class="px-4 py-2 text-white hover:bg-[#17181b] transition text-sm">Logout</a>
+        </div>
+    </div>
